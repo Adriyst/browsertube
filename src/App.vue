@@ -7,6 +7,7 @@
 <script>
 import SearchBar from './components/SearchBar';
 
+
 export default {
     name: 'App',
     components: {
@@ -14,7 +15,7 @@ export default {
     },
     methods: {
         onTermChange(e) {
-            console.log(e);
+            
         }
     }
 };
