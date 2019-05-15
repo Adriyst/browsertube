@@ -1,3 +1,5 @@
+Lite testprosjekt i Vue. Om noen vil prøve dette, trengs en API-nøkkel fra Youtubes data-API.
+
 # browsertube
 
 ## Project setup
