@@ -1,7 +1,9 @@
 <template>
-    <li class="list-group-item">
-        <img :src="thumbnailURL">
-        {{ videoElement.snippet.title }}
+    <li class="list-group-item media" @click="onSelection">
+        <img :src="thumbnailURL" class="mr-3">
+        <div class="media-body">
+            {{ videoElement.snippet.title }}
+        </div>
     </li>
 </template>
 
@@ -15,10 +17,22 @@ export default {
         thumbnailURL() {
             return this.videoElement.snippet.thumbnails.default.url;
         }
+    },
+    methods: {
+        onSelection() {
+            this.$emit('onSelectedVideo', this.videoElement);
+        }
     }
 }
 </script>
 
-<style>
-
+<style scoped>
+    li {
+        display: flex;
+        cursor: pointer;
+    }
+    
+    li:hover {
+        background: #eee;
+    }
 </style>
